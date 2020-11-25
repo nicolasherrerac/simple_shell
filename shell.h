@@ -56,3 +56,4 @@ char *_strdup(char *str);
 int _atoi(char *s);
 
 #endif /*SIMPLE_SHELL_H*/
+

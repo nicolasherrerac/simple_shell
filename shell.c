@@ -11,7 +11,8 @@ int main(void)
 	signal(SIGINT, _sig);
 
 	args = NULL;
-	fun_prompt("$ ");
+	if (isatty(STDIN_FILENO))
+		fun_prompt("$ ");
 	while (getline(&args, &len, stdin) != -1)
 	{
 		if (args[0] != '\n')
@@ -29,14 +30,17 @@ int main(void)
 					env = _getenv("PATH");
 					path = _getpath(env, arr);
 					execute(arr, path);
-					fun_prompt("$ ");
+					if (isatty(STDIN_FILENO))
+						fun_prompt("$ ");
 				}
 			}
 			else
-				fun_prompt("$ ");
+				if (isatty(STDIN_FILENO))
+					fun_prompt("$ ");
 		}
 		else
-			fun_prompt("$ ");
+			if (isatty(STDIN_FILENO))
+				fun_prompt("$ ");
 	}
 	free(arr);
 	return (0);

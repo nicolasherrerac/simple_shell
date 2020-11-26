@@ -8,5 +8,5 @@ void fun_prompt(char *prompt)
 {
 	if (prompt == NULL)
 		return;
-	write(STDOUT_FILENO, prompt, strlen(prompt));
+	write(STDOUT_FILENO, prompt, 9);
 }

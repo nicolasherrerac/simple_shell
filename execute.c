@@ -14,7 +14,7 @@ void execute(char **arr, char **args)
 
 	if (pid == -1)
 	{
-		perror("Error");
+		write(STDERR_FILENO, "command not found", 17);
 		free(arr);
 		free(args);
 		_exit(1);
@@ -27,7 +27,7 @@ void execute(char **arr, char **args)
 			if (execve(args[i], arr, environ) == -1)
 				i++;
 		}
-		perror("Error");
+		perror("command not found");
 		free(arr);
 		_exit(1);
 	}
@@ -55,8 +55,8 @@ void execute_slash(char **arr)
 	{
 		if (execve(arr[0], arr, environ) == -1)
 		{
-			perror("Command does not exist");
-			printf("\n");
+			perror("Command not found");
+			_putchar('\n');
 			free(arr);
 			_exit(1);
 		}

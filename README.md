@@ -17,17 +17,17 @@ The C program and functions are compiled with gcc 4.8.4 using the flags -Wall -W
 
 + AUTHORS
 + README.md
-+ _atoi.c
-+ _env.c
-+ funtions.c
-+ memory.c
-+ shell.c
-+ token_line.c
-+ execute.c
++ builst.c
++ built_ins.c
++ enviroment.c
++ err.c
 + helpers.c
++ main.c
++ memory.c
++ path.c
 + man_1_simple_shell
-+ prompt.c
 + shell.h
++ token_line.c
 
 # Compilation
 

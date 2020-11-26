@@ -54,6 +54,6 @@ char *_strcat(char *dest, char *src);
 char *_memset(char *s, int b, unsigned int n);
 char *_strdup(char *str);
 int _atoi(char *s);
+int _putchar(char c);
 
 #endif /*SIMPLE_SHELL_H*/
-

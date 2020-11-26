@@ -74,17 +74,15 @@ All the files are to be compiled on Ubuntu 14.04 LTS Compile your code with
 type the command in interactive or non-interactive mode
 
 # Libraries
--#include <stdio.h>
--#include <stdlib.h>
--#include <signal.h>
--#include <unistd.h>
--#include <string.h>
--#include <sys/types.h>
--#include <sys/wait.h>
--#include <sys/stat.h>
--#include <errno.h>
--#define BUFSIZE 1024
--#define DELIM " \t\r\n"
+- #include <stdio.h>
+- #include <stdlib.h>
+- #include <unistd.h>
+- #include <string.h>
+- #include <sys/types.h>
+- #include <sys/stat.h>
+- #include <sys/wait.h>
+- #include <limits.h>
+- #include <signal.h>
 
 # List of allowed functions and system calls
 

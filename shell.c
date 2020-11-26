@@ -12,7 +12,7 @@ int main(void)
 
 	args = NULL;
 	if (isatty(STDIN_FILENO))
-		fun_prompt("$ ");
+		fun_prompt("#cisfun$ ");
 	while (getline(&args, &len, stdin) != -1)
 	{
 		if (args[0] != '\n')

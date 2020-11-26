@@ -6,7 +6,7 @@ Repository for Simple Shell project
 # Description
 
 UNIX command line interpreter. Execute commands read from the standard input.
-No handle special characters, env , history and help built-in, file as input, comments, alias, && and ||.
+No handle special characters, history and help built-in, file as input, comments, alias, && and ||.
 
 # Requirements
 

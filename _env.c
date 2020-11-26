@@ -10,10 +10,10 @@ char *_getenv(char *name)
 	int len;
 
 	env = environ;
-	len = strlen(name);
+	len = _strlen(name);
 	while (*env != NULL)
 	{
-		if (strncmp(*env, name, len) == 0)
+		if (_strcmp(*env, name, len) == 0)
 			return (*env);
 		env++;
 	}
@@ -32,14 +32,14 @@ char **_getpath(char *s, char **args)
 	int len;
 	int i;
 
-	len = strlen(s);
+	len = _strlen(s);
 	path = malloc(sizeof(char *) * (len + 5));
 	if (path == NULL)
 	{
 		free(path);
 		_exit(1);
 	}
-	strcpy(path, s);
+	_strcpy(path, s);
 	token = strtok(path, ":");
 	arr = malloc(sizeof(char *) * BUFSIZE + 5);
 	if (arr == NULL)
@@ -61,8 +61,8 @@ char **_getpath(char *s, char **args)
 		_strcat(str, del);
 		_strcat(str, args[0]);
 		token = strtok(NULL, ":");
-		arr[i] = strdup(str); /*Error 2*/
-		memset(str, 0, BUFSIZE);
+		arr[i] = _strdup(str); /*Error 2*/
+		_memset(str, 0, BUFSIZE);
 		i++;
 	}
 	free(str);

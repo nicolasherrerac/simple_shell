@@ -8,7 +8,7 @@ int funtion_cd(char **args)
 {
 	if (args[1] == NULL)
 	{
-		fprintf(stderr, "Error: expected argument to \"cd\"\n");
+		write(STDERR_FILENO, "Error: expected argument to \"cd\"\n", 36);
 	}
 	else
 	{
@@ -59,16 +59,16 @@ int printenv(char **args)
 			j = 0;
 			while (environ[i][j] != '\0')
 			{
-				putchar((environ[i])[j]);
+				_putchar((environ[i])[j]);
 				/*return(value);*/
 				j++;
 			}
 			i++;
-			printf("\n");
+			_putchar('\n');
 		}
 		return (0);
 	}
-	putchar('\n');
+	_putchar('\n');
 	return (1);
 }
 /**

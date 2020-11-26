@@ -1,0 +1,49 @@
+.TH MAN_SIMPLE_SHELL "Noviembre 2020" "1.0" "SHELL interpreter command line manual".
+.SH NAME
+.B Simple Shell
+-  The Simple Shell created by Nicolas Herrera and Victor Plaza.
+-  Command interpreter
+.SH SYNOPSIS
+.IR - [COMMAND] [ARGUMENT] [FILE].
+
+
+
+.SH DESCRIPTION
+ .B Simple Shell
+ - The Shell is a command line interpreter of linux.
+
+.SH RETURN VALUE
+
+If everything was successful our return 0 program.
+
+.SH OPTIONS
+.B [^C]
+- When you type Ctrl + c this symbol is printed
+.B [^D]
+- When you type Ctrl + d this make that exit successful our program
+.B [exit]
+- When you type "exit" this make exits the shell.
+
+.SH ENVIROMENT
+- When you type "env" it search aumatically in the PATH and set it
+
+.SH EXAMPLES
+.B $ls
+
+AUTHORS  exe_slash.c  fun_signal.c    funtions.c  getpath.c  memory.c  shell    shell.h
+_atoi.c  execute.c    funtion_buil.c  getenv.c    helpers.c  prompt.c  shell.c  token_line.c
+
+.B /bin/pwd
+
+/home/vagrant/holberton/simple_shell
+
+
+
+.SH AUTHORS
+
+.NM
+
+.PP
+Victor Plaza - https://github.com/vic-1998
+.PP
+Nicolas Herrera Castro - https://github.com/nicolasherrerac

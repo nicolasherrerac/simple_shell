@@ -31,16 +31,14 @@ int main(void)
 					path = _getpath(env, arr);
 					execute(arr, path);
 					if (isatty(STDIN_FILENO))
-						fun_prompt("$ ");
+						fun_prompt("#cisfun$ ");
 				}
 			}
-			else
-				if (isatty(STDIN_FILENO))
-					fun_prompt("$ ");
+			else if (isatty(STDIN_FILENO))
+				fun_prompt("#cisfun$ ");
 		}
-		else
-			if (isatty(STDIN_FILENO))
-				fun_prompt("$ ");
+		else if (isatty(STDIN_FILENO))
+			fun_prompt("#cisfun$ ");
 	}
 	free(arr);
 	return (0);
